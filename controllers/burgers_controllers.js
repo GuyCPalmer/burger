@@ -55,5 +55,22 @@ router.get("/", function(req, res) {
      })
 
      //select eaten burger by id
-     
- })
+     .then(function(newDevourer){
+         models.burgers.findOne( {where: {id: req.params.id} })
+
+         //use returned burger object to
+         .then(function(eatenBurger){
+             //update the burgers status as eaten
+             eatenBurger.update({
+                 devoured: true,
+             })
+             //when the burger is devoured refresh page
+             .then(function() {
+                 res.redurect('/index');
+             });
+         });
+     });
+ });
+
+ //export route
+ module.exports = router;
