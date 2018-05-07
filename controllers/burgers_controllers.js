@@ -1,13 +1,13 @@
 //dependencies
 var express = require("express");
 var router = express.Router();
-var db = require("../models")
+var db = require('../models/burger.js');
 
 //extracts sequelize connection from models
-var sequelizeConnection = models.sequelize;
+//var sequelizeConnection = models.sequelize;
 
 //sync the tables
-sequelizeConnection.sync();
+//sequelizeConnection.sync();
 
 //create routes --- index redirect
 router.get("/", function(req, res) {
@@ -30,7 +30,7 @@ router.get("/", function(req, res) {
  //create new burger
  router.post('/burger/create', function (req, res) {
      //sequelize query to add new burget to database
-     models.burgers.create(
+     burgers.create(
          {
              burger_name: req.body.burger_name,
              devoured: false

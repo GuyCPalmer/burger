@@ -3,16 +3,17 @@
 
 module.exports = function(sequelize, dataTypes) {
     var Burger = sequelize.define('burger', {
-        burger_name: dataTypes.STRING,
+        burger_name: {
+        type: dataTypes.STRING,
         devoured: dataTypes.BOOLEAN,
-        devourerId: dataTypes.INTEGER
-     }, {
-        classMethods: {
-            associate: function(models) {
-                // each burger has one devourer attached to it
-                Burger.hasOne(models.devourers)
-            }
-        }
+        devourerId: dataTypes.INTEGER,
+        allowNull: false
+
+     }, 
+     devoured: {
+        type: dataTypes.BOOLEAN,
+        defaultValue: 0
+    }
     });
-    return burgers
+return Burger;
 };

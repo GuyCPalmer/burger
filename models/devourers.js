@@ -2,7 +2,7 @@
 //======================
 
 module.exports = function(sequelize, DataTypes) {
-    var devourers = sequelize.devine('devourers', {
+    var devourers = sequelize.define('devourers', {
         devourer_name: DataTypes.STRING,
         burgerId: DataTypes.INTEGER
     }, {
