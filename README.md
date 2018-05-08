@@ -9,7 +9,7 @@ As part of this project, I created a full-stack site that utilizes express, hand
 [Burger]
 
 ## Main Page
-![logo]: https://image.ibb.co/c8VuYn/burgerimg.png
+![alt text] https://image.ibb.co/c8VuYn/burgerimg.png
 
 
 ## Prerequisites:
