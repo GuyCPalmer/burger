@@ -4,12 +4,12 @@
 Burger is a restaurant app that mimics the experience of a fast food restaurant online! 
 
 ## Introduction:
-As part of this project, I created a full-stack site that utilizes express, handlebars and mysql. The Site records user input which is stored in the mysql database. The user inputs their order and is alerted when the order is ready to be picked up. THe user then "eats" the burger and is asked if they would like to order another. 
+As part of this project, I created a full-stack site that utilizes express, handlebars and mysql. The Site records user input which is stored in the mysql database. The user inputs their order and is alerted when the order is ready to be picked up. The user then "eats" the burger and is asked if they would like to order another. 
 
 [Burger]
 
 ## Main Page
-[logo]: https://image.ibb.co/c8VuYn/burgerimg.png
+![logo]: https://image.ibb.co/c8VuYn/burgerimg.png
 
 
 ## Prerequisites:
