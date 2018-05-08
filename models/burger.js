@@ -1,19 +1,25 @@
-// Burger Model
-//==================
+//Export the database function for the controller (burgers_controller.js)
 
-module.exports = function(sequelize, dataTypes) {
-    var Burger = sequelize.define('burger', {
+// The burger has a burger_name attribute of type DataTypes.String
+// and a devoured attribute that is false by default
+module.exports = function(sequelize, DataTypes) {
+    var Burger = sequelize.define("Burger", {
         burger_name: {
-        type: dataTypes.STRING,
-        devoured: dataTypes.BOOLEAN,
-        devourerId: dataTypes.INTEGER,
-        allowNull: false
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 140]
+            }
+        },
+        devoured: {
+            type:DataTypes.BOOLEAN,
+            defaultValue: false
+        }
+    },
+    {
+        freezeTableName: true,
 
-     }, 
-     devoured: {
-        type: dataTypes.BOOLEAN,
-        defaultValue: 0
-    }
+        tableName: "Burger"
     });
-return Burger;
+    return Burger
 };
